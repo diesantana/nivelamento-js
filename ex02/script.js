@@ -8,15 +8,16 @@ const configuracoes = {
 };
 
 // 1. Armazene o objeto 'configuracoes' no Local Storage como JSON
-// Seu código aqui
+localStorage.setItem('config', JSON.stringify(configuracoes));
 
 // 2. Recupere as configurações do Local Storage e converta de volta para objeto
-const configuracoesSalvas = // Seu código aqui
+const configuracoesSalvas = JSON.parse(localStorage.getItem('config'));
 
 // 3. Modifique o tema para "claro" e salve novamente
-// Seu código aqui
+configuracoesSalvas.tema = 'claro';
+localStorage.setItem('config', JSON.stringify(configuracoesSalvas));
 
 // 4. Crie uma função para limpar todas as configurações salvas
 function limparConfiguracoes() {
-  // Seu código aqui
+  localStorage.clear();
 }
