@@ -16,6 +16,8 @@ function exibirUsuario(usuario) {
     // Retorne uma string: "Nome: [nome], Idade: [idade]"
     
     // SEU CÓDIGO AQUI ↓
+    const {nome, idade = 18} = usuario;
+    return  `Nome: ${nome}, Idade: ${idade}`;
 }
 
 
