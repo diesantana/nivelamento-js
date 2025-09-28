@@ -9,14 +9,21 @@ const pessoa = {
 };
 
 // 1. Converta o objeto 'pessoa' para uma string JSON
-const pessoaJSON = // Seu código aqui
+const pessoaJSON = JSON.stringify(pessoa);
 
 // 2. Converta a string JSON de volta para um objeto JavaScript
-const pessoaObjeto = // Seu código aqui
+const pessoaObjeto = JSON.parse(pessoaJSON);
 
 // 3. Modifique a string JSON para adicionar a propriedade "casado: false"
-const pessoaModificada = // Seu código aqui
+const pessoaModificadaOBJ = JSON.parse(pessoaJSON); // Transforma o JSON para Obj
+pessoaModificadaOBJ.casado = false; // Adiciona a propriedade
+const pessoaModificada = JSON.stringify(pessoaModificadaOBJ); // Converte o obj modificado para JSON
+
 
 // 4. Verifique o tipo de 'pessoaJSON' e 'pessoaObjeto' usando typeof
-console.log("Tipo de pessoaJSON:", /* Seu código aqui */);
-console.log("Tipo de pessoaObjeto:", /* Seu código aqui */);
+console.log("Tipo de pessoaJSON:", typeof pessoaJSON);
+console.log("Tipo de pessoaObjeto:", typeof pessoaObjeto);
+
+console.log(pessoaJSON);
+console.log(pessoaObjeto);
+console.log(pessoaModificada);
