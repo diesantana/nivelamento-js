@@ -3,14 +3,19 @@
 
 // 1. Conte de 10 a 1 (use while)
 let contador = 10;
-// Seu código aqui
+while(contador > 0) {
+  console.log(contador);
+  contador--;
+}
 
-// 2. Simule um login (peça senha até digitar "1234")
-let senha = "";
-// Seu código aqui (use prompt() ou simule no console)
 
-// 3. Use do...while para imprimir números ímpares < 20
+// 2. Use do...while para imprimir números ímpares < 20
+console.log();
+console.log("Exercício 2: ");
 let num = 1;
 do {
-  // Seu código aqui
+  if(num % 2 !== 0) {
+    console.log(num);
+  }
+  num++;
 } while (num < 20);
