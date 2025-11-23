@@ -57,6 +57,21 @@ function converterNota(nota) {
   let conceito = "";
 
   // SEU CÓDIGO AQUI (use switch(true))
+  switch (true) {
+    case nota >= 9:
+      conceito = "A";
+      break;
+    case nota >= 7:
+      conceito = "B";
+      break;
+    case nota >= 5:
+      conceito = "C";
+      break;
+    case nota < 5:
+      conceito = "D";
+      break;
+  }
+
 
   return conceito;
 }
@@ -71,8 +86,8 @@ console.log("Sexta:", classificarDia("sexta"));
 console.log("Domingo:", classificarDia("domingo"));
 console.log("Terça:", classificarDia("terça"));
 
-// console.log("\n2. Conversão de Notas:");
-// console.log("Nota 9.5:", converterNota(9.5));
-// console.log("Nota 7.5:", converterNota(7.5));
-// console.log("Nota 6:", converterNota(6));
-// console.log("Nota 4:", converterNota(4));
+console.log("\n2. Conversão de Notas:");
+console.log("Nota 9.5:", converterNota(9.5));
+console.log("Nota 7.5:", converterNota(7.5));
+console.log("Nota 6:", converterNota(6));
+console.log("Nota 4:", converterNota(4));
